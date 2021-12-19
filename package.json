@@ -1,11 +1,16 @@
 {
-  "name": "fluffy-frog-bot",
-  "version": "1.0.0",
-  "description": "gogo",
+  "name": "fluffyfrog-bot",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "donghun, kim",
-  "license": "ISC"
+  "author": "DongHun, Kim",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0"
+  },
+  "type": "module"
 }
