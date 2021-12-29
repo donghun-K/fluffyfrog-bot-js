@@ -2,6 +2,7 @@ import DiscordJS, { Intents } from 'discord.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
+const Discord = require('discord.js');
 const client = new DiscordJS.Client({
   intents:[
     Intents.FLAGS.GUILDS,
@@ -19,6 +20,6 @@ client.on('messageCreate', msg=>{
       content: '왜 불러?'
     })
   }
-})
+});
 
 client.login(process.env.TOKEN);
