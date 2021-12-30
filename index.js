@@ -21,10 +21,10 @@ client.once('ready', async () => {
 
 client.on('messageCreate', (message)=> {
   if (message.content === '공부하자') {
-    message.reply{
+    message.reply({
       content: 'https://www.youtube.com/watch?v=c00uuV1zPCs'
-    }
+    })
   }
-})
+});
 
 client.login(process.env.TOKEN);
