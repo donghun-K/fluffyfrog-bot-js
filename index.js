@@ -12,16 +12,13 @@ const client = new DiscordJS.Client({
   ]
 });
 
-client.commands = new Collection;
-
-
-client.once('ready', async () => {
-  console.log('복실이, 준비 완료!'); 
+client.on('ready', ()=> {
+  console.log('복실이, 준비 완료!');
 });
 
-client.on('messageCreate', (message)=> {
-  if (message.content === '공부하자') {
-    message.reply({
+client.on('messageCreate', msg => {
+  if(msg.content === "공부하자"){
+    msg.reply({
       content: 'https://www.youtube.com/watch?v=c00uuV1zPCs'
     })
   }
