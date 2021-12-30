@@ -1,24 +1,30 @@
-import DiscordJS, { Intents } from 'discord.js'
-import dotenv from 'dotenv'
+import DiscordJS, { Intents, Collection, Interaction } from 'discord.js';
+import dotenv from 'dotenv';
+import fs from 'fs';
+
 dotenv.config()
 
 const client = new DiscordJS.Client({
   intents:[
     Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MEMBERS
   ]
 });
 
-client.on('ready', ()=> {
-  console.log('복실이, 준비 완료!');
+client.commands = new Collection;
+
+
+client.once('ready', async () => {
+  console.log('복실이, 준비 완료!'); 
 });
 
-client.on('messageCreate', msg=>{
-  if(msg.content === "복실아"){
-    msg.reply({
-      content: '왜 불러?'
-    })
+client.on('messageCreate', (message)=> {
+  if (message.content === '공부하자') {
+    message.reply{
+      content: 'https://www.youtube.com/watch?v=c00uuV1zPCs'
+    }
   }
-});
+})
 
 client.login(process.env.TOKEN);
