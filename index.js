@@ -7,8 +7,7 @@ dotenv.config()
 const client = new DiscordJS.Client({
   intents:[
     Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS
+    Intents.FLAGS.GUILD_MESSAGES
   ]
 });
 
@@ -17,7 +16,7 @@ client.on('ready', ()=> {
 });
 
 client.on('messageCreate', msg => {
-  if(msg.content === "공부하자"){
+  if(msg.content === '공부하자'){
     msg.reply({
       content: 'https://www.youtube.com/watch?v=c00uuV1zPCs'
     })
