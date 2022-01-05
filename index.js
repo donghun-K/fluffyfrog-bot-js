@@ -54,33 +54,38 @@ client.on('interactionCreate', async (interaction)=>{
         case 'rapping ame' : 
           interaction.reply({
             content: 'https://www.youtube.com/watch?v=q0vAwGB1OUY\n외힙 원탑 아메~',
-            })
+          })
           break;
         case 'vibing ame' : 
-        interaction.reply({
-          content: 'https://www.youtube.com/watch?v=qUZYrGFh26Q\n 흔들 아메~',
-        })
-        break;
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=qUZYrGFh26Q\n 흔들 아메~',
+          })
+          break;
         case 'ame' : 
-        interaction.reply({
-          content: 'https://www.youtube.com/watch?v=cIpWpEoD60s\n 아멜리아~ 왓슨~~~',
-        })
-        break;
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=cIpWpEoD60s\n 아멜리아~ 왓슨~~~',
+          })
+          break;
         case 'ina' : 
-        interaction.reply({
-          content: 'https://www.youtube.com/watch?v=inTzDQ1zQ10\n 무너~',
-        })
-        break;
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=inTzDQ1zQ10\n 무너~',
+          })
+          break;
         case 'kronii' : 
-        interaction.reply({
-          content: 'https://www.youtube.com/watch?v=XNGXUPmY3Jw\n 시계눈나~',
-        })
-        break;
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=XNGXUPmY3Jw\n 시계눈나~',
+          })
+          break;
         case 'gura' : 
-        interaction.reply({
-          content: 'https://www.youtube.com/watch?v=XohhaT18ja4\n 상어~',
-        })
-        break;
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=XohhaT18ja4\n 상어~',
+          })
+          break;
+        default :
+          interaction.reply({
+            content: 'You can study with \n - ame\n - rapping ame\n - vibing ame\n - ina\n - kronii\n - gura]',
+            ephemeral: true
+          })
       }
       break;          
   }
