@@ -35,7 +35,8 @@ client.on('ready', ()=>{
         required: true,
         type: DiscordJS.Constants.ApplicationCommandOptionTypes.STRING
       }
-    ]
+    ],
+    ephemeral: true
   });  
 });
 
