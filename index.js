@@ -83,7 +83,7 @@ client.on('interactionCreate', async (interaction)=>{
           break;
         default :
           interaction.reply({
-            content: 'You can study with \n - ame\n - rapping ame\n - vibing ame\n - ina\n - kronii\n - gura]',
+            content: 'You can study with \n - ame\n - rapping ame\n - vibing ame\n - ina\n - kronii\n - gura',
             ephemeral: true
           })
       }
