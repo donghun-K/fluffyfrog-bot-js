@@ -1,6 +1,6 @@
 import DiscordJS, { Intents, Collection, Interaction } from 'discord.js';
 import dotenv from 'dotenv';
-import fs from 'fs';
+// import fs from 'fs';
 
 dotenv.config()
 
@@ -26,28 +26,17 @@ client.on('ready', ()=>{
   }
 
   commands?.create({
-    name: 'ame',
-    description: 'Ame Love'
-  });
-
-  commands?.create({
-    name: 'add',
-    description: 'Adds two numbers.',
+    name: 'study',
+    description: 'study with',
     options: [
       {
-        name: 'num1',
-        description: 'The first number.',
+        name: 'with',
+        description: 'select',
         required: true,
-        type: DiscordJS.Constants.ApplicationCommandOptionTypes.NUMBER
-      },
-      {
-        name: 'num2',
-        description: 'The second number.',
-        required: true,
-        type: DiscordJS.Constants.ApplicationCommandOptionTypes.NUMBER
+        type: DiscordJS.Constants.ApplicationCommandOptionTypes.STRING
       }
     ]
-  })
+  });  
 });
 
 client.on('interactionCreate', async (interaction)=>{
@@ -58,18 +47,48 @@ client.on('interactionCreate', async (interaction)=>{
   const { commandName, options } = interaction;
   // destructuring
 
-  if (commandName === 'ame'){
-    interaction.reply({
-      content: 'https://www.youtube.com/watch?v=c00uuV1zPCs\n흔들 아메~'
-    });
-  } else if (commandName  === 'add') {
-    const num1 = options.getNumber('num1');
-    const num2 = options.getNumber('num2');
-
-    interaction.reply({
-      content: `계산 결과는 ${num1 + num2}!`,
-      ephemeral: true
-    });
+  switch (commandName){
+    case 'study' :
+      const selected = options.getString('with');
+      switch (selected){
+        case 'rapping ame' : 
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=q0vAwGB1OUY\n외힙 원탑 아메~',
+            ephemeral: true
+          })
+          break;
+        case 'vibing ame' : 
+        interaction.reply({
+          content: 'https://www.youtube.com/watch?v=qUZYrGFh26Q\n 흔들 아메~',
+          ephemeral: true
+        })
+        break;
+        case 'ame' : 
+        interaction.reply({
+          content: 'https://www.youtube.com/watch?v=cIpWpEoD60s\n 아멜리아~ 왓슨~~~',
+          ephemeral: true
+        })
+        break;
+        case 'ina' : 
+        interaction.reply({
+          content: 'https://www.youtube.com/watch?v=inTzDQ1zQ10\n 무너~',
+          ephemeral: true
+        })
+        break;
+        case 'kronii' : 
+        interaction.reply({
+          content: 'https://www.youtube.com/watch?v=XNGXUPmY3Jw\n 시계눈나~',
+          ephemeral: true
+        })
+        break;
+        case 'gura' : 
+        interaction.reply({
+          content: 'https://www.youtube.com/watch?v=XohhaT18ja4\n 상어~',
+          ephemeral: true
+        })
+        break;
+      }
+      break;          
   }
 });
 
