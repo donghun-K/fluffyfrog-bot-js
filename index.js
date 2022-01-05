@@ -35,8 +35,7 @@ client.on('ready', ()=>{
         required: true,
         type: DiscordJS.Constants.ApplicationCommandOptionTypes.STRING
       }
-    ],
-    ephemeral: true
+    ]
   });  
 });
 
@@ -55,37 +54,31 @@ client.on('interactionCreate', async (interaction)=>{
         case 'rapping ame' : 
           interaction.reply({
             content: 'https://www.youtube.com/watch?v=q0vAwGB1OUY\n외힙 원탑 아메~',
-            ephemeral: true
-          })
+            })
           break;
         case 'vibing ame' : 
         interaction.reply({
           content: 'https://www.youtube.com/watch?v=qUZYrGFh26Q\n 흔들 아메~',
-          ephemeral: true
         })
         break;
         case 'ame' : 
         interaction.reply({
           content: 'https://www.youtube.com/watch?v=cIpWpEoD60s\n 아멜리아~ 왓슨~~~',
-          ephemeral: true
         })
         break;
         case 'ina' : 
         interaction.reply({
           content: 'https://www.youtube.com/watch?v=inTzDQ1zQ10\n 무너~',
-          ephemeral: true
         })
         break;
         case 'kronii' : 
         interaction.reply({
           content: 'https://www.youtube.com/watch?v=XNGXUPmY3Jw\n 시계눈나~',
-          ephemeral: true
         })
         break;
         case 'gura' : 
         interaction.reply({
           content: 'https://www.youtube.com/watch?v=XohhaT18ja4\n 상어~',
-          ephemeral: true
         })
         break;
       }
