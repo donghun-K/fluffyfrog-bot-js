@@ -66,6 +66,11 @@ client.on('interactionCreate', async (interaction)=>{
             content: 'https://www.youtube.com/watch?v=cIpWpEoD60s\n 아멜리아~ 왓슨~~~',
           })
           break;
+        case 'watame' : 
+          interaction.reply({
+            content: 'https://www.youtube.com/watch?v=NsxP9JJf2yE\n 양이모~',
+          })
+          break;
         case 'ina' : 
           interaction.reply({
             content: 'https://www.youtube.com/watch?v=inTzDQ1zQ10\n 무너~',
