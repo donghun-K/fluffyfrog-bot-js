@@ -1,1 +1,1 @@
-# fluffyfrog-bot-JS
+# fluffyfrog-bot-js
